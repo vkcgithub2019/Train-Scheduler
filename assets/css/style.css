@@ -5,6 +5,16 @@
     background-color: #0e0b0b;
 }
 
+#localTime{
+    text-align: center;
+}
+
+#clock {
+    color: white;
+    text-align: center;
+}
+
+
 div.panel-body {
     background-image: url('../image/background_train.jpg');
     color: black;
