@@ -11,7 +11,7 @@ $(document).ready(function () {
     messagingSenderId: "423802686346",
     appId: "1:423802686346:web:608ca356177d2564"
   };
-  
+  firebase.initializeApp(firebaseConfig);
 
   var database = firebase.database();
 
@@ -37,13 +37,13 @@ $(document).ready(function () {
 
   // Firebase watcher + initial loader HINT: This code behaves similarly to .on("value")
   database.ref().on("child_added", function (childSnapshot) {
-// storing everthing into a variable
+// storing everything into a variable
     var newTrain = childSnapshot.val().trainName;
     var newLocation = childSnapshot.val().destination;
     var newFirstTrain = childSnapshot.val().firstTrain;
     var newFreq = childSnapshot.val().frequency;
 
-    // First Time (pushed back 1 year to make sure it comes before current time)
+    // using moment.js to figure the time, First Time (pushed back 1 year to make sure it comes before current time)
     var startTimeConverted = moment(newFirstTrain, "hh:mm").subtract(1, "years");
 
     // Current Time
