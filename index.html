@@ -25,8 +25,7 @@
   <!-- Bootstrap CDN library-->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
- 
-  <!-- Firebase Reference -->
+   <!-- Firebase Reference -->
   <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
 
   <!-- Link to external page, app.js where all the javascript codes resides -->
@@ -54,10 +53,12 @@
 <!--1st level header tag, will show heading for this page-->
 	  <h1 class="text-center">Anytime is Train Time</h1>
 
-<!--6th level header tag, smaller font-will show "current local time" on the page-->
+<!--5th level header tag, smaller font-will show "current local time" on the page-->
 <h5 id = "localTime">Local Time</h5>
-<h6 id = "clock">"Current Local Time"</h6>
-	  
+
+<!-- level 6 header tag for the clock showing current time. -->
+<h6 id = "clock1"></h6>
+
 <!--ending tag of jumbotron div-->
     </div>
 
@@ -77,6 +78,8 @@
           <th>Next Arrival</th>
 <!--this is the HTML table tag for the header which contains the minutes for the train's arrival--> 
           <th>Minutes Away</th>
+<!--this is the HTML tag for removal of entry in the panel-->
+          <th>Remove</th>
 <!--this is the ending table tag of the row.-->
      </tr>
 <!--this is the ending HTML table tag for the header-->
@@ -88,69 +91,67 @@
 <!--this is the ending HTML tag for the table. the </table> tag define an HTML table. -->
     </table>
 
-    <!-- Add Train Form -->
-    <!--this creates a row in a form, with a class called "row"-->
+<!-- Add Train Form -->
+<!--this creates a row in a form, with a class called "row"-->
     <div class="row">
-    <!--this row span the entire page-->
+<!--this row span the entire page-->
       <div class="col-lg-12">
-       <!--The .panel-default class is a basic (default) Bootstrap Panel.-->
+<!--The .panel-default class is a basic (default) Bootstrap Panel.-->
         <div class="panel panel-default">
-    <!--starting div tag class called panel-heading-->
+<!--starting div tag class called panel-heading-->
           <div class="panel-heading">
-    <!--panel heading with HTML level 3 header and a class call 'panel-title-->   
+<!--panel heading with HTML level 3 header and a class call 'panel-title-->   
             <h3 class="panel-title">Add Train</h3>
-    <!--ending HTML div for class "panel-heading" -->
+<!--ending HTML div for class "panel-heading" -->
           </div>
 
-    <!--starting HTML div with class "panel-body which holds the information for Train name, destination,time, and frequency-->
+<!--starting HTML div with class "panel-body which holds the information for Train name, destination,time, and frequency-->
           <div class="panel-body">
-    <!--creating a form for input information to search for new train, and which will be added to the list of existing trains-->
+<!--creating a form for input information to search for new train, and which will be added to the list of existing trains-->
             <form>
-    <!--using bootstrap for the followings, creating a div with class called "form-group, this is the starting div tag for this panel which contains the names of the search train-->
+<!--using bootstrap for the followings, creating a div with class called "form-group, this is the starting div tag for this panel which contains the names of the search train-->
               <div class="form-group">
-    <!-- creating a label for the train name-->
+<!-- creating a label for the train name-->
                   <label for="train-name">Train Name</label>
-    <!--specifying the kind of input as text, with id of "trainName"-->
+<!--specifying the kind of input as text, with id of "trainName"-->
                   <input class="form-control" id="trainName" type="text">
-    <!--ending HTMLdiv for the form-group-->
+<!--ending HTMLdiv for the form-group-->
               </div>
 
-    <!--using bootstrap for the followings, creating a div with class called "form-group, this is the starting div tag for this panel which contains the names of the search train-->
+<!--using bootstrap for the followings, creating a div with class called "form-group, this is the starting div tag for this panel which contains the names of the search train-->
               <div class="form-group">
-    <!-- creating a label for the train name-->
+<!-- creating a label for the train name-->
                   <label for="destination">Destination</label>
-    <!--input panel for the destination information with a class of "form-control" and text type-->
+<!--input panel for the destination information with a class of "form-control" and text type-->
                   <input class="form-control" id="destination" type="text">
-    <!--ending HTML div tag for "form-group"-->
+<!--ending HTML div tag for "form-group"-->
               </div>
 
-    <!--starting HTML div tag for the class "form-group"-->
+<!--starting HTML div tag for the class "form-group"-->
                 <div class="form-group"> 
-    <!--creating a label for the First Train Time in military time-->
+<!--creating a label for the First Train Time in military time-->
                     <label for="first-train-time">First Train Time (HH:mm - military time)</label>
-    <!--  -->                
+<!-- input panel for the first train information with a class of "form-control" and text type -->                
                     <input class="form-control" id="firstTrain" type="text">
     <!--ending HTML div tag for "form-group"-->                
                 </div>
-
-
+<!--starting HTML div tag for the class "form-group"-->
               <div class="form-group">
-    
+<!-- creating a label for the frequency-->   
                 <label for="train-frequency">Frequency (min)</label>
-
-    <!--input panel for the interval information with class of "form-control", an id of interval, and text type, and input type is number-->          
+<!--input panel for the interval information with class of "form-control", an id of interval, and text type, and input type is number-->          
                 <input class="form-control" id="interval" type="number">
-    <!--ending HTML tag for the "form-group"-->
+<!--ending HTML tag for the "form-group"-->
               </div>
-    <!--the submit button, with id of "addTrain"-->
+<!--the submit button, with id of "addTrain"-->
               <button class="btn btn-primary" id="addTrain" type="submit">Submit</button>
-    <!--ending HTML tag for form div-->
+<!--ending HTML tag for form div-->
             </form>
-    <!--ending HTML tag for panel-body-->
+<!--ending HTML tag for panel-body-->
           </div>
-    <!--ending HTML tag for panel-->
+<!--ending HTML tag for panel-->
         </div>
-    <!--ending HTML tag for class="col-lg-12"-->    
+<!--ending HTML tag for class="col-lg-12"-->    
       </div>
 <!--ending HTML tag for row div-->
     </div>

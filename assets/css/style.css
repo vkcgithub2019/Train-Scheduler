@@ -1,3 +1,4 @@
+/* Jumbotron is a Bootstrap component that occupies the whole view port width of the browser and used to create full width header sections easily */
 .jumbotron {
     color: #fff;
     background-position-y: 10%;
@@ -5,23 +6,33 @@
     background-color: #0e0b0b;
 }
 
-#localTime{
+/* local time display with id of localTime */
+#localTime {
+/* text is aligned center */
     text-align: center;
 }
-
-#clock {
+/* clock with local time display */
+#clock1 {
+/* font color is white */
     color: white;
+/* test is center aligned */
     text-align: center;
 }
 
-
+/* panels/ row displays for train informations */
 div.panel-body {
+/* background picture */
     background-image: url('../image/background_train.jpg');
+/* has a font color of black */
     color: black;
 }
 
+/* submit button */
 .btn-primary {
+/* color of button */
     background-color: #0d8613;
+/* button's border color */
     border-color: #fff;
+/* the submit word inside the button is bold */
     font-weight: bold;
 }
