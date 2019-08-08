@@ -36,3 +36,23 @@ div.panel-body {
 /* the submit word inside the button is bold */
     font-weight: bold;
 }
+/* creating a fixed footer at the bottom of the page */
+footer {
+/* color of the footer background */
+    background: #666666;
+/* color of the font */
+    color: #fff;
+/*no padding */
+    padding: 0;
+/* font size of the letters*/
+    font-size: 12px;
+/* text is center aligned */
+    text-align: center;
+/* fixed position at the bottom */
+    position:fixed;
+/* no space on the bottom of the footer box */
+    bottom: 0;
+/* span the entire width of the page */
+    width: 100%;
+    
+  }

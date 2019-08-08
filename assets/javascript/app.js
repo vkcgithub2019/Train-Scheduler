@@ -4,11 +4,11 @@ $(document).ready(function () {
   (function () {
 //creating a variable called clockElement to store time information
     var clockElement = document.getElementById( "clock1" );
-  
+// function to update the time 
     function updateClock ( clock ) {
       clock.innerHTML = new Date().toLocaleTimeString();
     }
- // set the time interval to 1 second  
+ // set the time interval to 1 second  , fires again and again in intervals
     setInterval(function () {
 //after one second lapsed, update the correct time
         updateClock( clockElement );
@@ -32,13 +32,16 @@ $(document).ready(function () {
       var database = firebase.database();
   //show current time
   var updateTime = function() {
+  //creating a variable to store current time in hour:minute
       var now = moment().format("hh:mm");
+  //getting the correct time by dynamically modifying the html element
       time = $("<p class = 'text-center'>").html("Current time:" + now);
+  //creating the html element, time
       $("#clock").html(time);
     }
 // function to update the time every minute
       updateTime();
-// setting time interval to 1 minute
+// setting time interval to 1 minute, fires again and again in intervals
       setInterval(updateTime, 60000);
 
   // Capture Button Click for adding trains
